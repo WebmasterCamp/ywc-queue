@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YWC16 | Queueing System Admin</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
+    <title>YWC17 | Queueing System</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/admin.css">
   </head>
@@ -18,68 +18,72 @@
     </div>
 
     <!-- Remote -->
-    <center>
-      <div id="branch">BRANCH NAME</div>
-      <h1>ON SCREEN: <div id="on-screen">-</div></h1>
+    <div style="max-width: 960px; margin: auto;">
+      <div id="branch">Branch name</div>
+      <h1>On screen: <div id="on-screen">-</div></h1>
 
-      <br>
-      <br>
+      <div class="queue-container">
+        <!-- Regular Queue -->
+        <div class="regular-queue">
+          <h1>Queue</h1>
+          <input id="current-queue" type="tel" value="0" min="0" max="80">
+          <br>
+          <button onclick="modifyQueue(-1)">
+            <h2> - </h2>
+          </button>
+          <button onclick="modifyQueue(1)">
+            <h2> + </h2>
+          </button>
+          <button onclick="publishQueue()">
+            <h2> PUBLISH </h2>
+          </button>
+        </div>
+        <!-- Custom Queue -->
+        <div class="custom-queue">
+          <h1>Custom text</h1>
+          <input id="custom-queue" type="text">
+          <br>
+          <button onclick="publishCustomText()">
+            <h2> PUBLISH </h2>
+          </button>
+        </div>
+      </div>
 
-      <!-- Regular Queue -->
-      <h1>QUEUE</h1>
-      <input id="current-queue" type="tel" value="0" min="0" max="80">
-      <br>
-      <button onclick="modifyQueue(-1)">
-        <h2> - </h2>
-      </button>
-      <button onclick="modifyQueue(1)">
-        <h2> + </h2>
-      </button>
-      <button onclick="publishQueue()">
-        <h2> PUBLISH </h2>
-      </button>
-
-      <br>
-      <br>
-      <br>
-
-      <!-- Custom Queue -->
-      <h1>CUSTOM</h1>
-      <input id="custom-queue" type="text">
-      <br>
-      <button onclick="publishCustomText()">
-        <h2> PUBLISH </h2>
-      </button>
-    </center>
-
-    <!-- QR Code -->
-    <div class="logo-container">
-      <h1 id="check-queue-text">ตรวจสอบคิวได้ที่นี่</h1>
-      <img src="./images/qrcode.png" alt="qrcode">
-      <br>
-      <a href="https://kykungz.github.io/ywc-queue">
-        https://kykungz.github.io/ywc-queue
-      </a>
     </div>
 
-    <footer>
-      YWC Queueing System @2018 Created by <a href="https://github.com/kykungz">Kongpon C.</a>
+    <!-- QR Code -->
+    <div class="qr-container">
+      <div class="qr-code-wrapper">
+        <img src="./images/qrcode.png" alt="qrcode">
+      </div>
+      <div>
+        <p class="invite-text" id="check-queue-text">สามารถตรวจสอบคิวเรียกสัมภาษณ์ได้ที่</p>
+        <a class="queue-link" href="https://q.ywc.in.th" target="_blank">
+          https://q.ywc.in.th/
+        </a>
+      </div>
+    </div>
+
+    <footer id="footer">
+      Copyright 2003 - 2019.
+      Young Webmaster Camp, in associate with Thai Webmaster Association. All right reserved.
     </footer>
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
     <script>
       // Initialize Firebase
-      var config = {
-        apiKey: 'AIzaSyANpRPym9opPpLf76fAN0pntLB9M3fOTtQ',
-        authDomain: 'hackathon-ca2a6.firebaseapp.com',
-        databaseURL: 'https://hackathon-ca2a6.firebaseio.com',
-        projectId: 'hackathon-ca2a6',
-        storageBucket: 'hackathon-ca2a6.appspot.com',
-        messagingSenderId: '818453846503'
+      var firebaseConfig = {
+        apiKey: "AIzaSyCttQgKGjOqtdhWmtpG7q-nUVXkhHM0A0M",
+        authDomain: "ywc17-landing.firebaseapp.com",
+        databaseURL: "https://ywc17-landing.firebaseio.com",
+        projectId: "ywc17-landing",
+        storageBucket: "ywc17-landing.appspot.com",
+        messagingSenderId: "295170337515",
+        appId: "1:295170337515:web:e236ee46ae838dd0f66cae"
       }
-      firebase.initializeApp(config)
+      firebase.initializeApp(firebaseConfig)
     </script>
     <script src="./lib/hammer.js"></script>
     <script src="./js/getPrefix.js"></script>

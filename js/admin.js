@@ -11,8 +11,10 @@ const setup = () => {
     }
   })
 
-  document.getElementById('branch').innerText = `WEB ${branch.toUpperCase()}`
+  document.getElementById('branch').innerText = `Web ${capitalize(branch)}`
 }
+
+const capitalize = (text) => text.substring(0, 1).toUpperCase() + text.substring(1)
 
 const modifyQueue = amount => {
   const queue = parseInt(document.getElementById('current-queue').value) + amount

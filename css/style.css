@@ -1,28 +1,38 @@
 @font-face {
-  font-family: 'Supermarket';
+  font-family: 'Maledpan';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/supermarket-webfont.woff) format('woff');
+  src: url(../fonts/Maledpan-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Maledpan';
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/Maledpan-Bold.otf) format('opentype');
 }
 
 * {
-  font-family: 'Supermarket', 'Raleway', sans-serif;
+  font-family: 'Maledpan', sans-serif;
+  font-weight: bold;
 }
 
 body {
   margin: 1em;
-  background-image: url(../images/bg.png),
-    linear-gradient(to bottom, white, #e3e0f1);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: 100vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(49.41deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
+  background-attachment: fixed;
+  background-position: center;
 }
 
 footer {
   text-align: center;
   margin-top: 2em;
-  color: gray;
+  color: rgba(255,255,255,0.7);
+}
+
+footer a {
+  color: white;
 }
 
 h1,
@@ -37,14 +47,51 @@ h4 {
   margin: 2em 0;
 }
 
+.qr-container {
+  max-width: 960px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-gap: 1.5em;
+}
+
+.qr-container > div {
+  display: inline-block;
+}
+
+.qr-container > div:last-child {
+  align-self: center;
+}
+
+.qr-code-wrapper img {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.invite-text {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.queue-link {
+  color: white;
+  font-size: 48px;
+  text-decoration: none;
+}
+
 .logo {
   height: 70px;
 }
 
 .branch-container {
+  max-width: 960px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
+  justify-content: center;
 }
 
 .branch-card {
@@ -53,11 +100,11 @@ h4 {
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
-  border: 1.5px solid #b3abd9;
   padding: 0.75rem;
   text-align: center;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
 }
 
 .branch-card > div {
@@ -65,20 +112,28 @@ h4 {
 }
 
 .branch-card > div:first-child {
-  margin: 1em;
+  min-height: 206px;
+  position: relative;
+}
+
+.branch-card > div:first-child img[alt="web content"] {
+  margin-top: 20px;
+}
+
+.branch-card > div:first-child > h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .branch-card img {
   box-sizing: border-box;
   flex: 1;
-  margin: 2em 4em;
-  margin-top: 1em;
-  max-height: 200px;
 }
 
 .branch-card h3 {
   font-weight: bold;
-  font-family: 'Raleway';
 }
 
 .branch-name {
@@ -91,7 +146,7 @@ h4 {
 }
 
 .color-content-dark {
-  color: #579553 !important;
+  color: #00BE7A  !important;
 }
 
 .color-programming {
@@ -99,7 +154,7 @@ h4 {
 }
 
 .color-programming-dark {
-  color: #49b5f0 !important;
+  color: #4D9ED5 !important;
 }
 
 .color-designer {
@@ -107,7 +162,7 @@ h4 {
 }
 
 .color-designer-dark {
-  color: #f4b348 !important;
+  color: #FCBE4F !important;
 }
 
 .color-marketing {
@@ -115,7 +170,7 @@ h4 {
 }
 
 .color-marketing-dark {
-  color: #f36883 !important;
+  color: #FA5C87 !important;
 }
 
 .color-purple {
@@ -127,7 +182,8 @@ h4 {
 }
 
 .current-queue-text {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: normal;
   margin-bottom: 0.25em;
 }
 
@@ -159,6 +215,15 @@ h4 {
     justify-content: space-between;
     align-items: center;
   }
+  .branch-card > div {
+    width: 40%;
+  }
+  .branch-card > div:first-child {
+    min-height: auto;
+  }
+  .branch-card > div:first-child > h3 {
+    position: static;
+  }
   .current-queue {
     font-size: 40px;
   }
@@ -167,11 +232,11 @@ h4 {
     margin-bottom: 0.25em;
   }
   .branch-card img {
-    margin: 0;
-    margin-bottom: 1em;
     max-height: 80px;
+    margin: 0 !important;
   }
-  .branch-card > div:first-child {
-    margin: 1em 0;
+
+  .qr-container {
+    display: none;
   }
 }

@@ -67,61 +67,61 @@
 @keyframes content-alert {
   0%,
   100% {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
   }
 
   50% {
-    background-color: rgba(177, 210, 174, 1);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #99F2C3 100%);
   }
 }
 
 .content-alert {
-  animation: content-alert infinite 0.5s;
+  animation: content-alert infinite 1s;
 }
 
 @keyframes programming-alert {
   0%,
   100% {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
   }
 
   50% {
-    background-color: rgba(167, 219, 248, 1);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #85E5FF 100%);
   }
 }
 
 .programming-alert {
-  animation: programming-alert infinite 0.5s;
+  animation: programming-alert infinite 1s;
 }
 
 @keyframes designer-alert {
   0%,
   100% {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
   }
 
   50% {
-    background-color: rgba(250, 219, 168, 1);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFF6CF 100%);
   }
 }
 
 .designer-alert {
-  animation: designer-alert infinite 0.5s;
+  animation: designer-alert infinite 1s;
 }
 
 @keyframes marketing-alert {
   0%,
   100% {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
   }
 
   50% {
-    background-color: rgba(251, 198, 209, 1);
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #FFCCE8 100%);
   }
 }
 
 .marketing-alert {
-  animation: marketing-alert infinite 0.5s;
+  animation: marketing-alert infinite 1s;
 }
 
 .tada {

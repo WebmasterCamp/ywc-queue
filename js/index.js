@@ -37,3 +37,8 @@ branches.forEach(branch => {
     animate(branch)
   })
 })
+
+firebase.database().ref(`ywc-queue/announcement`).on('value', snapshot => {
+  const value = snapshot.val()
+  document.getElementById(`announcement`).innerHTML = value
+})

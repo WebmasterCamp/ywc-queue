@@ -89,6 +89,7 @@ h4 {
 
 .logo > img {
   width: 100%;
+  max-width: 300px;
   padding: 1em 0;
 }
 

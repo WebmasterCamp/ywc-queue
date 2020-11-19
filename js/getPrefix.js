@@ -1,4 +1,4 @@
-const getPrefix = branch => {
+const getPrefix = (branch) => {
   switch (branch.toLowerCase()) {
     case 'content':
       return 'C'

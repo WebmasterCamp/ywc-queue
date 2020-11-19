@@ -1,0 +1,22 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/repo/
+    branches:
+      only:
+        - "ywc18"
+    steps:
+      - checkout:
+          path: ~/repo
+      - run:
+          name: Install NPM modules
+          command: |
+            yarn add -D firebase-tools
+      - run:
+          name: Deploy
+          command: |
+            ./node_modules/.bin/firebase deploy --non-interactive --token=$FIREBASE_TOKEN
+

@@ -6,6 +6,10 @@ input {
   color: black;
 }
 
+#ywc-logo {
+  width: 180px;
+}
+
 .queue-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -50,7 +54,25 @@ button {
   margin-top: 0.5em;
 }
 
-center {
+.center {
   margin: auto;
   max-width: 600px;
+}
+
+.logo-container {
+  display:flex;
+  justify-content: center;
+  margin: 2em auto;
+}
+
+.qr-container--admin > .qr-code-wrapper {
+  width:150px;
+}
+
+.qr-container--admin {
+  max-width: 960px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-gap: 1.5em;
 }

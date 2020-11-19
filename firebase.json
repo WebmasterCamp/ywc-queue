@@ -1,17 +1,15 @@
 {
   "hosting": {
-    "site": "ywc17-q",
+    "site": "ywc18-q",
     "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }]
   }
 }

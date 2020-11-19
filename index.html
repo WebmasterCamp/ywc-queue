@@ -1,126 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YWC17 | Queueing System</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/animation.css">
 
-    <meta name="og:type" content="website">
-    <meta name="og:title" content="17th Young Webmaster Camp | Queueing">
-    <meta name="og:description" content="Young Webmaster Camp ครั้งที่ 17 “Social Change, Arrange The World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด">
-    <meta name="og:image" content="https://ywc17.ywc.in.th/images/ogImage.png">
-    <meta name="article:author" content="https://www.facebook.com/ywcth">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="https://ywc17.ywc.in.th/images/ogImage.png">
-    <meta name="og:url" content="https://ywc17.ywc.in.th/">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>YWC18 | Queueing System</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animation.css">
 
-    <link rel="shortcut icon" type="image/png" href="https://ywc.in.th/favicon.png"/>
-    <link rel="shortcut icon" type="image/x-icon" href="https://ywc.in.th/favicon.ico"/>
-  </head>
+  <meta name="og:type" content="website">
+  <meta name="og:title" content="18th Young Webmaster Camp | Queueing">
+  <meta name="og:description"
+    content="Young Webmaster Camp ครั้งที่ 18 “Social Change, Arrange The World” ค่ายสร้างเว็บไซต์ระดับอุดมศึกษาที่ใหญ่ที่สุด">
+  <meta name="og:image" content="https://ywc18.ywc.in.th/images/ogImage.png">
+  <meta name="article:author" content="https://www.facebook.com/ywcth">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:src" content="https://ywc18.ywc.in.th/images/ogImage.png">
+  <meta name="og:url" content="https://ywc18.ywc.in.th/">
 
-  <body>
-    <!-- YWC Logo -->
-    <div class="logo-container">
-      <a href="./index.html">
-        <img id="ywc-logo" class="logo" src="./images/logo.svg" alt="">
-      </a>
-    </div>
-    <div style="font-size: 24px; color: white; text-align: center; margin-bottom: 1em;" id="announcement">
-    </div>
+  <link rel="shortcut icon" type="image/png" href="https://ywc.in.th/favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://ywc.in.th/favicon.ico" />
+</head>
 
-    <div class="branch-container">
-      <!-- Web Content -->
-      <div onclick="changePage('content')" id="content-card" class="branch-card">
-        <div>
-          <img src="./images/branches/web-content.png" alt="web content">
-          <h3 class="color-content-dark branch-name">Web Content</h3>
-        </div>
-        <div>
-          <span class="current-queue-text">ขอเชิญหมายเลข</span>
-          <h1 id="content-queue" class="current-queue color-content-dark">-</h1>
-        </div>
-      </div>
-
-      <!-- Web Designer -->
-      <div onclick="changePage('designer')" id="designer-card" class="branch-card">
-        <div>
-          <img src="./images/branches/web-design.png" alt="web design">
-          <h3 class="color-designer-dark branch-name">Web Design</h3>
-        </div>
-        <div>
-          <span class="current-queue-text">ขอเชิญหมายเลข</span>
-          <h1 id="designer-queue" class="current-queue color-designer-dark">
-            -
-          </h1>
-        </div>
-      </div>
-
-      <!-- Web Merketing -->
-      <div onclick="changePage('marketing')" id="marketing-card" class="branch-card">
-        <div>
-          <img src="./images/branches/web-marketing.png" alt="web marketing">
-          <h3 class="color-marketing-dark branch-name">Web Marketing</h3>
-        </div>
-        <div>
-          <span class="current-queue-text">ขอเชิญหมายเลข</span>
-          <h1 id="marketing-queue" class="current-queue color-marketing-dark">-</h1>
-        </div>
-      </div>
-
-      <!-- Web Programming -->
-      <div onclick="changePage('programming')" id="programming-card" class="branch-card">
-          <div>
-            <img src="./images/branches/web-programming.png" alt="web programming">
-            <h3 class="color-programming-dark branch-name">Web Programming</h3>
-          </div>
-          <div>
-            <span class="current-queue-text">ขอเชิญหมายเลข</span>
-            <h1 id="programming-queue" class="current-queue color-programming-dark">-</h1>
-          </div>
-        </div>
-    </div>
+<body>
+  <!-- YWC Logo -->
+  <div class="header">
+    <a class="logo" href="./index.html">
+      <img id="ywc-logo" src="./images/logo.svg" alt="">
+    </a>
 
     <!-- QR Code -->
     <div class="qr-container">
-      <div class="qr-code-wrapper">
-        <img src="./images/qrcode.png" alt="qrcode">
-      </div>
       <div>
         <p class="invite-text" id="check-queue-text">สามารถตรวจสอบคิวเรียกสัมภาษณ์ได้ที่</p>
         <a class="queue-link" href="https://q.ywc.in.th" target="_blank">
           https://q.ywc.in.th/
         </a>
       </div>
+      <div class="qr-code-wrapper">
+        <img src="./images/qrcode.png" alt="qrcode">
+      </div>
+    </div>
+  </div>
+
+  <div class="branch-container">
+    <!-- Web Content -->
+    <div onclick="changePage('content')" id="content-card" class="branch-card">
+      <div>
+        <img src="./images/branches/content-queue-icon.svg" alt="web content">
+        <h3 class="color-content-dark branch-name">Web Content</h3>
+      </div>
+      <span class="current-queue-text">ขอเชิญหมายเลข</span>
+      <h1 id="content-queue" class="current-queue color-content-dark">-</h1>
     </div>
 
-    <footer id="footer">
-      Copyright 2003 - 2019.
-      Young Webmaster Camp, in associate with Thai Webmaster Association. All right reserved.
-    </footer>
+    <!-- Web Designer -->
+    <div onclick="changePage('designer')" id="designer-card" class="branch-card">
+      <div>
+        <img src="./images/branches/design-queue-icon.svg" alt="web design">
+        <h3 class="color-designer-dark branch-name">Web Design</h3>
+      </div>
+      <span class="current-queue-text">ขอเชิญหมายเลข</span>
+      <h1 id="designer-queue" class="current-queue color-designer-dark">
+        -
+      </h1>
+    </div>
 
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-    <script>
-      // Initialize Firebase
-      var firebaseConfig = {
-        apiKey: "AIzaSyCttQgKGjOqtdhWmtpG7q-nUVXkhHM0A0M",
-        authDomain: "ywc17-landing.firebaseapp.com",
-        databaseURL: "https://ywc17-landing.firebaseio.com",
-        projectId: "ywc17-landing",
-        storageBucket: "ywc17-landing.appspot.com",
-        messagingSenderId: "295170337515",
-        appId: "1:295170337515:web:e236ee46ae838dd0f66cae"
-      }
-      firebase.initializeApp(firebaseConfig)
-    </script>
-    <script src="./lib/hammer.js"></script>
-    <script src="./js/getPrefix.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/login.js"></script>
-  </body>
+    <!-- Web Merketing -->
+    <div onclick="changePage('marketing')" id="marketing-card" class="branch-card">
+      <div>
+        <img src="./images/branches/marketing-queue-icon.svg" alt="web marketing">
+        <h3 class="color-marketing-dark branch-name">Web Marketing</h3>
+      </div>
+      <span class="current-queue-text">ขอเชิญหมายเลข</span>
+      <h1 id="marketing-queue" class="current-queue color-marketing-dark">-</h1>
+    </div>
+
+    <!-- Web Programming -->
+    <div onclick="changePage('programming')" id="programming-card" class="branch-card">
+      <div>
+        <img src="./images/branches/programming-queue-icon.svg" alt="web programming">
+        <h3 class="color-programming-dark branch-name">Web Programming</h3>
+      </div>
+      <span class="current-queue-text">ขอเชิญหมายเลข</span>
+      <h1 id="programming-queue" class="current-queue color-programming-dark">-</h1>
+    </div>
+
+    <!-- Sponsor -->
+    <div class="branch-card">
+      <div class="sponsor-header">
+        <h3 class="branch-name">ผู้สนับสนุนโครงการ</h3>
+        <img src="./images/logo-oranged.svg" alt="web programming">
+      </div>
+      <span class="current-queue-text">ขอเชิญหมายเลข</span>
+      <h1 id="programming-queue" class="current-queue color-programming-dark">-</h1>
+    </div>
+  </div>
+
+  <div style="font-size: 56px; color: white; text-align: center; margin: 1rem 0;" id="announcement">
+  </div>
+
+  <footer id="footer">
+    Copyright 2003 - 2019.
+    Young Webmaster Camp, in associate with Thai Webmaster Association. All right reserved.
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyDjN2Y5_aoNZpIIXNnK-iyt54StENtYDQc",
+      authDomain: "ywc-queue.firebaseapp.com",
+      databaseURL: "https://ywc-queue.firebaseio.com",
+      projectId: "ywc-queue",
+      storageBucket: "ywc-queue.appspot.com",
+      messagingSenderId: "1004345051812",
+      appId: "1:1004345051812:web:f3e5785d5db4065cc73431"
+    };
+    firebase.initializeApp(firebaseConfig)
+  </script>
+  <script src="./lib/hammer.js"></script>
+  <script src="./js/getPrefix.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+
 </html>

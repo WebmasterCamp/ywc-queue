@@ -1,1 +1,1 @@
-firebase deploy --only hosting:ywc17-q
+firebase deploy --only hosting:ywc18-q

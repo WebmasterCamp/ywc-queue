@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YWC17 | Queueing System</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/admin.css">
-  </head>
-  <body>
-    <!-- YWC Logo -->
-    <div class="logo-container">
-      <a href="./index.html">
-        <img id="ywc-logo" class="logo" src="./images/logo.svg" alt="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>YWC18 | Queueing System</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+  <!-- YWC Logo -->
+  <div class="logo-container">
+    <a href="./index.html">
+      <img id="ywc-logo" class="logo" src="./images/logo.svg" alt="">
+    </a>
+  </div>
+
+  <!-- Remote -->
+  <div style="max-width: 960px; margin: auto;">
+    <div id="branch">Branch name</div>
+    <h1>On screen: <div id="on-screen">-</div>
+    </h1>
+
+    <div class="queue-container">
+      <!-- Regular Queue -->
+      <div class="regular-queue">
+        <h1>Queue</h1>
+        <input id="current-queue" type="tel" value="0" min="0" max="80">
+        <br>
+        <button onclick="modifyQueue(-1)">
+          <h2> - </h2>
+        </button>
+        <button onclick="modifyQueue(1)">
+          <h2> + </h2>
+        </button>
+        <button onclick="publishQueue()">
+          <h2> PUBLISH </h2>
+        </button>
+      </div>
+      <!-- Custom Queue -->
+      <div class="custom-queue">
+        <h1>Custom text</h1>
+        <input id="custom-queue" type="text">
+        <br>
+        <button onclick="publishCustomText()">
+          <h2> PUBLISH </h2>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- QR Code -->
+  <div class="qr-container">
+    <div class="qr-code-wrapper">
+      <img src="./images/qrcode.png" alt="qrcode">
+    </div>
+    <div>
+      <p class="invite-text" id="check-queue-text">สามารถตรวจสอบคิวเรียกสัมภาษณ์ได้ที่</p>
+      <a class="queue-link" href="https://q.ywc.in.th" target="_blank">
+        https://q.ywc.in.th/
       </a>
     </div>
+  </div>
 
-    <!-- Remote -->
-    <div style="max-width: 960px; margin: auto;">
-      <div id="branch">Branch name</div>
-      <h1>On screen: <div id="on-screen">-</div></h1>
+  <footer id="footer">
+    Copyright 2003 - 2019.
+    Young Webmaster Camp, in associate with Thai Webmaster Association. All right reserved.
+  </footer>
 
-      <div class="queue-container">
-        <!-- Regular Queue -->
-        <div class="regular-queue">
-          <h1>Queue</h1>
-          <input id="current-queue" type="tel" value="0" min="0" max="80">
-          <br>
-          <button onclick="modifyQueue(-1)">
-            <h2> - </h2>
-          </button>
-          <button onclick="modifyQueue(1)">
-            <h2> + </h2>
-          </button>
-          <button onclick="publishQueue()">
-            <h2> PUBLISH </h2>
-          </button>
-        </div>
-        <!-- Custom Queue -->
-        <div class="custom-queue">
-          <h1>Custom text</h1>
-          <input id="custom-queue" type="text">
-          <br>
-          <button onclick="publishCustomText()">
-            <h2> PUBLISH </h2>
-          </button>
-        </div>
-      </div>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyCttQgKGjOqtdhWmtpG7q-nUVXkhHM0A0M",
+      authDomain: "ywc18-landing.firebaseapp.com",
+      databaseURL: "https://ywc18-landing.firebaseio.com",
+      projectId: "ywc18-landing",
+      storageBucket: "ywc18-landing.appspot.com",
+      messagingSenderId: "295170337515",
+      appId: "1:295170337515:web:e236ee46ae838dd0f66cae"
+    }
+    firebase.initializeApp(firebaseConfig)
+  </script>
+  <script src="./lib/hammer.js"></script>
+  <script src="./js/getPrefix.js"></script>
+  <script src="./js/admin.js"></script>
+  <script src="./js/login.js"></script>
+</body>
 
-    </div>
-
-    <!-- QR Code -->
-    <div class="qr-container">
-      <div class="qr-code-wrapper">
-        <img src="./images/qrcode.png" alt="qrcode">
-      </div>
-      <div>
-        <p class="invite-text" id="check-queue-text">สามารถตรวจสอบคิวเรียกสัมภาษณ์ได้ที่</p>
-        <a class="queue-link" href="https://q.ywc.in.th" target="_blank">
-          https://q.ywc.in.th/
-        </a>
-      </div>
-    </div>
-
-    <footer id="footer">
-      Copyright 2003 - 2019.
-      Young Webmaster Camp, in associate with Thai Webmaster Association. All right reserved.
-    </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-    <script>
-      // Initialize Firebase
-      var firebaseConfig = {
-        apiKey: "AIzaSyCttQgKGjOqtdhWmtpG7q-nUVXkhHM0A0M",
-        authDomain: "ywc17-landing.firebaseapp.com",
-        databaseURL: "https://ywc17-landing.firebaseio.com",
-        projectId: "ywc17-landing",
-        storageBucket: "ywc17-landing.appspot.com",
-        messagingSenderId: "295170337515",
-        appId: "1:295170337515:web:e236ee46ae838dd0f66cae"
-      }
-      firebase.initializeApp(firebaseConfig)
-    </script>
-    <script src="./lib/hammer.js"></script>
-    <script src="./js/getPrefix.js"></script>
-    <script src="./js/admin.js"></script>
-    <script src="./js/login.js"></script>
-  </body>
 </html>

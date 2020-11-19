@@ -246,6 +246,9 @@ h4 {
   }
 }
 
+.sponsors img {
+  height: 100%;
+}
 
 .sponsor-header {
   display: flex;
@@ -260,4 +263,34 @@ h4 {
 
 .sponsor-header > img {
   height: 60px;
+}
+
+.vip-1 {
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.vip-2 {
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gold {
+  height: 12%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.silver{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 50%);
+  height: 20%;
+  max-width: 90%;
+}
+
+.silver img {
+  width: 100%;
 }

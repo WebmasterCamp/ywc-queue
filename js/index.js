@@ -4,16 +4,17 @@ const timer = {
   content: null,
   programming: null,
   designer: null,
-  marketing: null
+  marketing: null,
 }
 
-const changePage = branch => {
+const changePage = (branch) => {
+  console.log(firebase.auth().currentUser)
   if (firebase.auth().currentUser) {
     window.location = `./admin.html?branch=${branch}`
   }
 }
 
-const animate = branch => {
+const animate = (branch) => {
   const textId = `${branch}-queue`
   const cardId = `${branch}-card`
   const alertName = `${branch}-alert`
@@ -29,16 +30,23 @@ const animate = branch => {
   }, duration)
 }
 
-branches.forEach(branch => {
-  firebase.database().ref(`ywc-queue/${branch}`).on('value', snapshot => {
-    const value = snapshot.val()
-    const text = value.custom !== '' ? value.custom : getPrefix(branch) + value.current
-    document.getElementById(`${branch}-queue`).innerText = text
-    animate(branch)
-  })
+branches.forEach((branch) => {
+  firebase
+    .database()
+    .ref(`ywc-queue/${branch}`)
+    .on('value', (snapshot) => {
+      const value = snapshot.val()
+      const text =
+        value.custom !== '' ? value.custom : getPrefix(branch) + value.current
+      document.getElementById(`${branch}-queue`).innerText = text
+      animate(branch)
+    })
 })
 
-firebase.database().ref(`ywc-queue/announcement`).on('value', snapshot => {
-  const value = snapshot.val()
-  document.getElementById(`announcement`).innerHTML = value
-})
+firebase
+  .database()
+  .ref(`ywc-queue/announcement`)
+  .on('value', (snapshot) => {
+    const value = snapshot.val()
+    document.getElementById(`announcement`).innerHTML = value
+  })

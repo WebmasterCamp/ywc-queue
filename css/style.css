@@ -15,6 +15,7 @@
 * {
   font-family: 'Maledpan', sans-serif;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
 body {
@@ -113,16 +114,31 @@ h4 {
   align-items: center;
   flex-direction: column;
 
-  margin-right: 35px;
+  margin-right: 15px;
+}
+
+.body-container.sponsor-layout .branch-container img {
+  width: 120px !important;
+  margin-right: 30px;
 }
 
 .branch-container img {
-  width: 120px !important;
+  width: 180px;
+}
+
+.body-container:not(.sponsor-layout) .branch-container .branch-name {
+  font-size: 1.4em;
+  margin-top: 20px;
+}
+
+.body-container:not(.sponsor-layout) .branch-container .current-queue-text {
+  font-weight: 300;
 }
 
 .body-container.sponsor-layout .branch-card {
   flex-direction: row;
-  height: 15vh;
+  height: 160px;
+  width: 382px;
   width: 100%;
 
   padding: 20px 15px;
@@ -139,7 +155,8 @@ h4 {
 }
 
 .body-container.sponsor-layout .branch-card img {
-  width: 100%;
+  width: 120px;
+  height: 90px;
 }
 
 .branch-container {
@@ -162,6 +179,11 @@ h4 {
   cursor: pointer;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
   background-color: #fff;
+}
+
+.body-container:not(.sponsor-layout) .sponsors {
+  width: 100%;
+  max-width: 400px;
 }
 
 .sponsors {
@@ -389,4 +411,12 @@ h4 {
 
 .vip-group {
   display: flex;
+}
+
+.body-container:not(.sponsor-layout) .sponsors img {
+  max-width: 100px !important;
+}
+
+.body-container:not(.sponsor-layout) .vip-group {
+  display: block;
 }

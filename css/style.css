@@ -153,6 +153,7 @@ h4 {
 .sponsors {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   height: 50vh;
   /* border-radius: 10px; */

@@ -1,4 +1,4 @@
-const duration = 10 * 1000
+const duration = 2 * 1000
 const branches = ['content', 'programming', 'designer', 'marketing']
 const timer = {
   content: null,
@@ -9,6 +9,7 @@ const timer = {
 
 const changePage = (branch) => {
   console.log(firebase.auth().currentUser)
+
   if (firebase.auth().currentUser) {
     window.location = `./admin.html?branch=${branch}`
   }

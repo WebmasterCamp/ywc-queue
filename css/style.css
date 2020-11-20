@@ -413,10 +413,22 @@ h4 {
   display: flex;
 }
 
-.body-container:not(.sponsor-layout) .sponsors img {
-  max-width: 100px !important;
+.body-container:not(.sponsor-layout) .branch-card {
+  padding: 200px 0px;
+}
+
+.body-container:not(.sponsor-layout) .sponsors .vip-1 img {
+  max-width: 250px;
+}
+
+.body-container:not(.sponsor-layout) .sponsors .vip-2 img {
+  max-width: 180px;
 }
 
 .body-container:not(.sponsor-layout) .vip-group {
   display: block;
+}
+
+.body-container:not(.sponsor-layout) .branch-name {
+  font-size: 1.8em;
 }

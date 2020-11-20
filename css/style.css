@@ -432,3 +432,49 @@ h4 {
 .body-container:not(.sponsor-layout) .branch-name {
   font-size: 1.8em;
 }
+
+@media (max-width: 900px) {
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  body {
+    padding: 0 1em !important;
+  }
+
+  .body-container {
+    display: flex !important;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .branch-card {
+    border-radius: 15px;
+  }
+
+  .branch-card > div {
+    width: 100% !important;
+  }
+
+  .branch-name {
+    font-size: 0.9em !important;
+  }
+
+  .branch-container {
+    width: 100%;
+  }
+
+  .branch-card {
+    margin-bottom: 30px;
+  }
+
+  .sponsors {
+    display: none;
+  }
+
+  .branch-card {
+    width: 100%;
+  }
+}

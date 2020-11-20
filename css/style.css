@@ -114,10 +114,16 @@ h4 {
   flex-direction: column;
 }
 
+.branch-container img {
+  width: 120px !important;
+}
+
 .body-container.compact .branch-card {
   flex-direction: row;
   height: 15vh;
   width: 100%;
+
+  padding: 20px 15px;
 }
 
 .body-container.compact .branch-card h3,
@@ -156,7 +162,7 @@ h4 {
 }
 
 .sponsors {
-  height: 600px;
+  height: 90vh;
 }
 
 .sponsors > div:not(:last-child) {
@@ -169,10 +175,6 @@ h4 {
 
 .branch-card > div:first-child {
   position: relative;
-}
-
-.branch-card > div:first-child img[alt='web content'] {
-  margin-top: 20px;
 }
 
 .branch-card > div:first-child > h3 {
@@ -243,7 +245,7 @@ h4 {
 }
 
 .current-queue {
-  font-size: 100px;
+  font-size: 60px;
   line-height: 1em;
   margin: 0.25em 0;
 }

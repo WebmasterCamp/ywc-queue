@@ -112,6 +112,8 @@ h4 {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+
+  margin-right: 35px;
 }
 
 .branch-container img {

@@ -15,6 +15,9 @@ const changePage = (branch) => {
   }
 }
 
+const toggleLayout = () => {
+  document.querySelector('.body-container').classList.toggle('sponsor-layout')
+}
 const animate = (branch) => {
   const textId = `${branch}-queue`
   const cardId = `${branch}-card`

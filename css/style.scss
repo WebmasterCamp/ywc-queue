@@ -429,6 +429,19 @@ h4 {
     object-fit: contain;
   }
 }
+.body-container .sponsors .vip-2 {
+  img {
+    object-fit: contain;
+  }
+  .depa {
+    width: 250px;
+  }
+  .scb-academy {
+    width: 280px;
+    max-width: 280px;
+    object-fit: fill;
+  }
+}
 
 .body-container:not(.sponsor-layout) .sponsors .silver {
   display: grid;

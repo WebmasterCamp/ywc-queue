@@ -100,14 +100,14 @@ h4 {
   justify-content: center;
 }
 
-.body-container.compact {
+.body-container.sponsor-layout {
   display: grid;
   grid-template-columns: 1fr 4.0625fr;
   grid-gap: 1vw;
   justify-content: center;
 }
 
-.body-container.compact .branch-container {
+.body-container.sponsor-layout .branch-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,7 +120,7 @@ h4 {
   width: 120px !important;
 }
 
-.body-container.compact .branch-card {
+.body-container.sponsor-layout .branch-card {
   flex-direction: row;
   height: 15vh;
   width: 100%;
@@ -128,17 +128,17 @@ h4 {
   padding: 20px 15px;
 }
 
-.body-container.compact .branch-card h3,
-.body-container.compact .branch-card span {
+.body-container.sponsor-layout .branch-card h3,
+.body-container.sponsor-layout .branch-card span {
   margin: 0;
   font-size: 1em;
 }
 
-.body-container.compact .branch-card h1 {
+.body-container.sponsor-layout .branch-card h1 {
   margin: 0;
 }
 
-.body-container.compact .branch-card img {
+.body-container.sponsor-layout .branch-card img {
   width: 100%;
 }
 

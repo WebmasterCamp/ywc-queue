@@ -372,7 +372,7 @@ h4 {
 .gold {
   height: 80px;
   width: 100%;
-  max-width: 650px;
+  max-width: 750px;
   display: flex;
   justify-content: space-around;
 
@@ -442,7 +442,55 @@ h4 {
     object-fit: fill;
   }
 }
-
+.body-container.sponsor-layout .sponsors .vip-group {
+  .vip-1,
+  .vip-2 {
+    transform: scale(1.1);
+  }
+  .vip-1 {
+    margin-right: 32px;
+  }
+  margin-bottom: 40px;
+}
+.body-container.sponsor-layout .sponsors .gold {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0px 40px;
+  transform: scale(0.75);
+  .brikl {
+    width: 264px;
+  }
+  .thairath {
+    width: 226px;
+  }
+  .lmwn {
+    width: 200px;
+  }
+}
+.body-container.sponsor-layout .sponsors .silver {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  transform: scale(0.8);
+  gap: 0px 40px;
+  .camphub {
+    width: 164px;
+  }
+  .easyrice {
+    width: 94px;
+  }
+  .pantip {
+    width: 110px;
+  }
+  .rainmaker {
+    width: 69px;
+  }
+  .cpall {
+    width: 100px;
+  }
+  .pant {
+    width: 146px;
+  }
+}
 .body-container:not(.sponsor-layout) .sponsors .silver {
   display: grid;
   grid-template-rows: repeat(2, auto);

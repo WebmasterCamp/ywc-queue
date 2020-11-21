@@ -316,60 +316,6 @@ h4 {
   font-size: 25px;
 }
 
-@media (max-width: 1200px) {
-  .body-container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* mobile */
-@media (max-width: 780px) {
-  .body-container {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
-  .branch-card {
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .branch-card > div {
-    width: 40%;
-  }
-  .branch-card > div:first-child {
-    min-height: auto;
-  }
-  .branch-card > div:first-child > h3 {
-    position: static;
-  }
-  .current-queue {
-    font-size: 40px;
-  }
-  .branch-name {
-    font-size: 14px;
-    margin-bottom: 0.25em;
-  }
-  .branch-card img {
-    max-height: 80px;
-    margin: 0 !important;
-  }
-  .qr-container {
-    display: none;
-  }
-}
-
 .sponsors img {
   height: 100%;
 }
@@ -709,11 +655,18 @@ h4 {
     padding: 0 1em !important;
   }
   .body-container {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    max-width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
+  }
+  .branch-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   .branch-card {
     border-radius: 15px;
@@ -735,6 +688,57 @@ h4 {
   }
   .branch-card {
     width: 100%;
+  }
+}
+
+/* mobile */
+@media (max-width: 780px) {
+  .branch-container {
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .branch-card {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .branch-card > div {
+    width: 40%;
+  }
+  .branch-card > div:first-child {
+    min-height: auto;
+  }
+  .branch-card > div:first-child > h3 {
+    position: static;
+  }
+  .current-queue {
+    font-size: 40px;
+  }
+  .branch-name {
+    font-size: 14px;
+    margin-bottom: 0.25em;
+  }
+  .branch-card img {
+    max-height: 80px;
+    margin: 0 !important;
+  }
+  .qr-container {
+    display: none;
+  }
+  .body-container:not(.sponsor-layout) .branch-container > .branch-card {
+    height: 12rem;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

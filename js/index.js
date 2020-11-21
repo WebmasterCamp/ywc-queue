@@ -25,6 +25,7 @@ const toggleLayout = () => {
 
       // hide video spon
       document.querySelector("#spon-section-video").style.display = "none";
+      document.querySelector("#ywc-youtube").remove();
       // show big spon
       document.querySelector("#spon-section-spon").style.display = "flex";
       break;
@@ -33,6 +34,7 @@ const toggleLayout = () => {
       document
         .querySelector(".body-container")
         .classList.remove("sponsor-layout");
+      document.querySelector("#ywc-youtube").remove();
       break;
     case 2:
       // video spon
@@ -54,7 +56,7 @@ const toggleLayout = () => {
       // inject
       document.querySelector(
         "#spon-section-video"
-      ).innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${
+      ).innerHTML = `<iframe id="ywc-youtube" width="560" height="315" src="https://www.youtube.com/embed/${
         videos[Math.floor(Math.random() * 100000) % videos.length]
       }?controls=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>`;
       break;

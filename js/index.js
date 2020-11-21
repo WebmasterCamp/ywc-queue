@@ -25,7 +25,9 @@ const toggleLayout = () => {
 
       // hide video spon
       document.querySelector("#spon-section-video").style.display = "none";
-      document.querySelector("#ywc-youtube").remove();
+      if (document.querySelector("#ywc-youtube") !== null) {
+        document.querySelector("#ywc-youtube").remove();
+      }
       // show big spon
       document.querySelector("#spon-section-spon").style.display = "flex";
       break;
@@ -34,7 +36,9 @@ const toggleLayout = () => {
       document
         .querySelector(".body-container")
         .classList.remove("sponsor-layout");
-      document.querySelector("#ywc-youtube").remove();
+      if (document.querySelector("#ywc-youtube") !== null) {
+        document.querySelector("#ywc-youtube").remove();
+      }
       break;
     case 2:
       // video spon

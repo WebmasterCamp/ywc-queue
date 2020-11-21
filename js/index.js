@@ -47,6 +47,10 @@ branches.forEach((branch) => {
     })
 })
 
+setInterval(() => {
+  toggleLayout()
+}, 5 * 60 * 1000)
+
 firebase
   .database()
   .ref(`ywc-queue/announcement`)

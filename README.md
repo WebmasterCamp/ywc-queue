@@ -1,8 +1,11 @@
 <h1 align="center">YWC Queueing System</h1>
 
-<p align="center">Queueing System for Young Webmaster Camp with remote control</p>
-
-<p align="center">https://kykungz.github.io/ywc-queue</p>
+<p align="center">
+  Queueing system for Young Webmaster Camp with remote control. Inherited from 
+  <a href="https://kykungz.github.io/ywc-queue">Kykungz</a>, cleaned up and modernized by 
+  <a href="https://github.com/Rayriffy">Rayriffy</a>, and styled by 
+  <a href="https://github.com/Nutn0n">Nutn0n</a> for YWC20.
+</p>
 
 ## Preview
 <div>

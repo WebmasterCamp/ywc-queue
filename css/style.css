@@ -20,7 +20,7 @@
 body {
   margin: 1em;
   min-height: 100vh;
-  background:#190200; 
+  background:#160301; 
   background-attachment: fixed;
   background-position: center;
 }
@@ -102,9 +102,10 @@ h4 {
   border-radius: 10px;
   padding: 0.75rem;
   text-align: center;
+  border:1px solid #ff691d;
   cursor: pointer;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
-  background-color: #fff;
+  background:transparent;
 }
 
 .branch-card > div {
@@ -142,35 +143,35 @@ h4 {
 }
 
 .color-content {
-  color: #81b77d !important;
+  color: #fff !important;
 }
 
 .color-content-dark {
-  color: #00BE7A  !important;
+  color: #fff  !important;
 }
 
 .color-programming {
-  color: #78c8f4 !important;
+  color: #fff !important;
 }
 
 .color-programming-dark {
-  color: #4D9ED5 !important;
+  color: #fff !important;
 }
 
 .color-designer {
-  color: #f7c778 !important;
+  color: #fff !important;
 }
 
 .color-designer-dark {
-  color: #FCBE4F !important;
+  color: #fff !important;
 }
 
 .color-marketing {
-  color: #f797aa !important;
+  color: #fff !important;
 }
 
 .color-marketing-dark {
-  color: #FA5C87 !important;
+  color: #fff !important;
 }
 
 .color-purple {

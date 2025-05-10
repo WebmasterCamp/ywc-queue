@@ -1,0 +1,36 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - ywc-20
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Change to your project's Node.js version if needed
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+        # If you use yarn instead of npm, replace with: run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: npm run build
+        # If you use a different build command, replace with your command, e.g.: run: npm run prod
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: 'live'
+          projectId: 'jwc-20-q'

@@ -6,6 +6,10 @@ on:
       - ywc-20
   workflow_dispatch:
 
+concurrency:
+  group: 'deploy'
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

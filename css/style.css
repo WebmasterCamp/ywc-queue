@@ -20,7 +20,7 @@
 body {
   margin: 1em;
   min-height: 100vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(49.41deg, #C73884 7.27%, #E13C6F 51.46%, #9B308E 95.22%);
+  background:#190200; 
   background-attachment: fixed;
   background-position: center;
 }

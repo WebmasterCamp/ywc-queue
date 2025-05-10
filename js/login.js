@@ -3,7 +3,7 @@ const login = () => {
     firebase.auth().signOut().then(() => alert('Logged out'))
   } else {
     const password = prompt('Enter password')
-    firebase.auth().signInWithEmailAndPassword('supawit.ruen@mail.kmutt.ac.th', password)
+    firebase.auth().signInWithEmailAndPassword('admin@ywc.in.th', password)
       .then(() => alert('Welcome Admin!'))
       .catch(() => alert('Incorrect Password'))
   }

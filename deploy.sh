@@ -1,1 +1,1 @@
-firebase deploy --only hosting:ywc17-q
+firebase deploy --project jwc-20-q --only hosting

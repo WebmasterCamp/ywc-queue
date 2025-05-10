@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "ywc17-q",
+    "site": "jwc-20-q",
     "public": ".",
     "ignore": [
       "firebase.json",
